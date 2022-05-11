@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Records list
+{% endblock %}
+
+{% block body %}
+    {% if records is defined and records|length %}
+        {{ dump(records) }}
+    {% else  %}
+        <p>List is empty</p>
+    {% endif %}
+{% endblock %}
